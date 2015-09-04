@@ -51,12 +51,11 @@ double solveLinearEquation(double input, double startValue, double endValue, dou
 
 - (void)setup
 {
-    self.sliderImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    self.sliderImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width / 2, 0, self.frame.size.width / 2, self.frame.size.height)];
     self.sliderImageView.image = [self sliderImage];
-
     [self addSubview:self.sliderImageView];
     
-    self.previewView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width / 2, 0, 50, 50)];
+    self.previewView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width / 4, 0, 50, 50)];
     self.previewView.alpha = 0.0;
     self.previewView.layer.cornerRadius = self.previewView.frame.size.width / 2;
     self.previewView.layer.masksToBounds = YES;
